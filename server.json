@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.JosueM1109/personal-finance-mcp",
+  "description": "Self-hosted, read-only MCP server that connects your banks and investments via Plaid.",
+  "repository": {
+    "url": "https://github.com/JosueM1109/personal-finance-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/josuem1109/personal-finance-mcp:1.0.0",
+      "transport": {
+        "type": "streamable-http",
+        "url": "http://localhost:{PORT}/mcp"
+      },
+      "environmentVariables": [
+        {
+          "name": "PLAID_CLIENT_ID",
+          "description": "Your Plaid client_id from the Plaid dashboard (Team Settings -> API).",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "PLAID_SECRET",
+          "description": "Your Plaid secret for the target environment (production or sandbox).",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "PLAID_ENV",
+          "description": "Plaid environment: production or sandbox.",
+          "isRequired": false,
+          "default": "production",
+          "choices": ["production", "sandbox"],
+          "format": "string"
+        },
+        {
+          "name": "PORT",
+          "description": "Port the MCP HTTP server listens on inside the container.",
+          "isRequired": false,
+          "default": "8000",
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
