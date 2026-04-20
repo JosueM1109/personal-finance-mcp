@@ -1,0 +1,7 @@
+fastmcp>=3.2.4,<4.0.0
+plaid-python>=39.1.0,<40.0.0
+python-dotenv>=1.0.0
+fastapi>=0.115.0
+uvicorn>=0.32.0
+pytest>=8.0.0
+pytest-mock>=3.12.0

@@ -1,0 +1,10 @@
+.env
+.env.local
+*.secret
+tokens.txt
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
