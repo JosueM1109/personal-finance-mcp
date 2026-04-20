@@ -34,17 +34,17 @@ claude : [calls get_recurring_transactions]
 
 All 9 tools are read-only. Each returns `{<data>: [...], "warnings": [...]}` so one broken bank doesn't break the whole query.
 
-| Tool | What it does |
-|---|---|
-| `list_accounts` | Every account across every linked bank, with balances |
-| `get_balances` | Live current + available balances (optionally filtered by account) |
-| `get_transactions` | Transactions in a date range (up to 2 years back) |
-| `search_transactions` | Keyword search across merchant / name / counterparty |
-| `get_recurring_transactions` | Detected recurring inflow + outflow streams |
-| `get_liabilities` | Credit cards, student loans, mortgages with APRs and payment details |
-| `get_investment_holdings` | Current holdings with symbol + security metadata |
-| `get_investment_transactions` | Buy / sell / dividend history in a date range |
-| `get_institutions_status` | Health of each linked bank (surfaces re-auth needs) |
+| Tool                          | What it does                                                         |
+| ----------------------------- | -------------------------------------------------------------------- |
+| `list_accounts`               | Every account across every linked bank, with balances                |
+| `get_balances`                | Live current + available balances (optionally filtered by account)   |
+| `get_transactions`            | Transactions in a date range (up to 2 years back)                    |
+| `search_transactions`         | Keyword search across merchant / name / counterparty                 |
+| `get_recurring_transactions`  | Detected recurring inflow + outflow streams                          |
+| `get_liabilities`             | Credit cards, student loans, mortgages with APRs and payment details |
+| `get_investment_holdings`     | Current holdings with symbol + security metadata                     |
+| `get_investment_transactions` | Buy / sell / dividend history in a date range                        |
+| `get_institutions_status`     | Health of each linked bank (surfaces re-auth needs)                  |
 
 ## Quickstart
 
@@ -59,7 +59,7 @@ Requires Python 3.11+, a Plaid account (free Trial plan), and an MCP client.
 ### 2. Install
 
 ```bash
-git clone https://github.com/<you>/personal-finance-mcp.git
+git clone https://github.com/JosueM1109/personal-finance-mcp.git
 cd personal-finance-mcp
 python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
